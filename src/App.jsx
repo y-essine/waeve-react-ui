@@ -4,11 +4,11 @@ import Home from '@/views/Home';
 
 function App() {
     return (
-        <div className="App">
+        <div className="App w-screen h-screen">
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Main />}>
-                        <Route path="home" element={<Home />} />
+                        <Route path="" element={<Home />} />
                         <Route path="about" element={<h1>About</h1>} />
                     </Route>
                     <Route path="login" element={<h1>Login</h1>} />
