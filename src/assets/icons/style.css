@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?alcjp5');
-  src:  url('fonts/icomoon.eot?alcjp5#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?alcjp5') format('truetype'),
-    url('fonts/icomoon.woff?alcjp5') format('woff'),
-    url('fonts/icomoon.svg?alcjp5#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?9cltpx');
+  src:  url('fonts/icomoon.eot?9cltpx#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?9cltpx') format('truetype'),
+    url('fonts/icomoon.woff?9cltpx') format('woff'),
+    url('fonts/icomoon.svg?9cltpx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -28,6 +28,21 @@
 .icon-ellipsis:before {
   content: "\e900";
 }
+.icon-favorite:before {
+  content: "\e9da";
+}
+.icon-comment:before {
+  content: "\e96e";
+}
+.icon-share:before {
+  content: "\e968";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-divide:before {
+  content: "\e902";
+}
 .icon-home:before {
   content: "\e901";
 }
@@ -49,17 +64,11 @@
 .icon-music:before {
   content: "\e911";
 }
-.icon-play:before {
-  content: "\e912";
-}
 .icon-dice:before {
   content: "\e915";
 }
 .icon-bullhorn:before {
   content: "\e91a";
-}
-.icon-podcast:before {
-  content: "\e91c";
 }
 .icon-book:before {
   content: "\e91f";
@@ -100,9 +109,6 @@
 .icon-cart:before {
   content: "\e93a";
 }
-.icon-coin-dollar:before {
-  content: "\e93b";
-}
 .icon-phone:before {
   content: "\e942";
 }
@@ -142,23 +148,11 @@
 .icon-undo2:before {
   content: "\e967";
 }
-.icon-redo2:before {
-  content: "\e968";
-}
-.icon-bubble2:before {
-  content: "\e96e";
-}
 .icon-bubbles3:before {
   content: "\e96f";
 }
-.icon-quotes-left:before {
-  content: "\e977";
-}
 .icon-spinner11:before {
   content: "\e984";
-}
-.icon-search:before {
-  content: "\e986";
 }
 .icon-wrench:before {
   content: "\e991";
@@ -198,13 +192,4 @@
 }
 .icon-star-full:before {
   content: "\e9d9";
-}
-.icon-heart:before {
-  content: "\e9da";
-}
-.icon-google:before {
-  content: "\ea88";
-}
-.icon-google2:before {
-  content: "\ea89";
 }

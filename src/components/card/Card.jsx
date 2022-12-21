@@ -16,7 +16,8 @@ const Card = ({ card }) => {
     );
 
     return (
-        <div className="w-full hover:bg-zinc-500/5 rounded-md duration-200 px-3 py-2">
+        <div className="w-full hover:bg-zinc-500/10 rounded-md duration-200 px-3 py-2">
+            {/* top section */}
             <div className="flex justify-between">
                 <div className="flex items-center">
                     <div className="w-10 h-10 bg-zinc-500 rounded-full mr-4 cursor-pointer">
@@ -27,34 +28,34 @@ const Card = ({ card }) => {
                         />
                     </div>
                     <div>
-                        <div
-                            className="text-sm font-medium capitalize hover:text-zinc-300/90 cursor-pointer"
-                            style={{ fontFamily: 'sans-serif', fontWeight: 600 }}>
+                        <div className="text-sm font-medium capitalize hover:text-zinc-300/90 cursor-pointer">
                             {card.author.name}
                         </div>
                     </div>
-                    <div className="mx-1">
-                        <div className="opacity-20">{dividerIcon}</div>
+                    <div>
+                        <Icon icon="divide" size={12} />
                     </div>
                     <div>
                         <div className="text-xs font-normal opacity-50 hover:opacity-75 cursor-pointer">
                             @{card.author.username}
                         </div>
                     </div>
-                    <div className="mx-1">
-                        <div className="opacity-20">{dividerIcon}</div>
+                    <div>
+                        <Icon icon="divide" size={12} />
                     </div>
                     <div>
                         <div className="text-xs font-normal opacity-30">{createdAt}</div>
                     </div>
                 </div>
                 <div className="flex items-center">
-                    <Icon icon="ellipsis" size={14} />
+                    <Icon icon="ellipsis" button size={14} />
                 </div>
             </div>
+            {/* content section */}
             <div className="mt-2">
                 <div className="text-sm font-normal">{card.content}</div>
             </div>
+            {/* interactions section */}
             <div>
                 <div className="flex items-center mt-2">
                     <div className="flex items-center">
@@ -65,14 +66,14 @@ const Card = ({ card }) => {
                                 className="w-full h-full rounded-full"
                             />
                         </div>
-                        <div className="mx-2">
-                            <div className="opacity-20">{dividerIcon}</div>
+                        <div>
+                            <Icon icon="divide" size={12} />
                         </div>
                         {/* like comment share icons */}
                         <div className="flex items-center">
-                            <Icon icon="heart" size={12} />
-                            <Icon icon="bubble2" size={12} />
-                            <Icon icon="redo2" size={12} />
+                            <Icon icon="favorite" button size={12} />
+                            <Icon icon="comment" button size={12} />
+                            <Icon icon="share" button size={12} />
                         </div>
                     </div>
                 </div>

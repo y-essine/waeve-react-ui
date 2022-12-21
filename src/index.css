@@ -7,7 +7,7 @@
 
     background: var(--bg);
 
-    @apply text-zinc-200 font-sans;
+    @apply text-zinc-200 text-sm;
     
 }
 
