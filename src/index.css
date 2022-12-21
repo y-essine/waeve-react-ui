@@ -7,8 +7,23 @@
 
     background: var(--bg);
 
-    @apply text-zinc-200 text-sm;
+    @apply text-zinc-300 text-lg;
+
+    overflow-y: overlay;
+    overflow-x: hidden;
     
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-zinc-700/80 hover:bg-zinc-600/70 rounded-full;
 }
 
 h1 {
