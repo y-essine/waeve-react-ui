@@ -5,13 +5,16 @@ import path from 'path';
 export default defineConfig({
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, 'src'),
-        },
-    },
-    plugins: [react({
-        jsxImportSource: '@emotion/react',
-        babel: {
-            plugins: ['@emotion/babel-plugin']
+            '@': path.resolve(__dirname, 'src')
         }
-    })],
-})
+    },
+    plugins: [
+        react({
+            jsxRuntime: 'automatic',
+            jsxImportSource: '@emotion/react',
+            babel: {
+                plugins: ['@emotion/babel-plugin']
+            }
+        })
+    ]
+});

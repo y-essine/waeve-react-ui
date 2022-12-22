@@ -1,7 +1,15 @@
-const Avatar = ({ src, size, className }) => {
+import clsx from 'clsx';
+import { css } from '@emotion/react';
+
+const Avatar = ({ src, size, className, border }) => {
     return (
-        <div className={`relative rounded-full ${className}`}>
-            <img className={`w-${size} h-${size} rounded-full`} src={src} alt="" />
+        <div
+            className={clsx(`relative rounded-full`, className, border && `border border-primary`)}
+            css={css`
+                width: ${size * 4}px;
+                height: ${size * 4}px;
+            `}>
+            <img className={`rounded-full h-full w-full`} src={src} alt="" />
         </div>
     );
 };

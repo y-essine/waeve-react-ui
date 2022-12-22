@@ -1,16 +1,21 @@
 import { Outlet } from 'react-router-dom';
-import Sidebar from '@/components/layouts/sidebar/Sidebar';
+import Navbar from '@/components/layouts/Navbar/Navbar';
+import Sidebar from '@/components/layouts/SideBar/Sidebar';
 
 function Main() {
     return (
-        <div className="flex w-full h-full">
-            {/* sidebar */}
-            <Sidebar />
-            <div className="flex flex-grow flex-col pb-5 bg-zinc-900">
-                {/* header */}
-                <div className="p-10"></div>
-                {/* content */}
-                <Outlet />
+        <div className="flex justify-center py-5 px-5 sm:px-10">
+            <div className="w-[1280px] h-full">
+                {/* navbar */}
+                <Navbar className="mb-10" />
+                <div className="flex">
+                    {/* sidebar */}
+                    <Sidebar />
+                    {/* content */}
+                    <div className="ml-8">
+                        <Outlet />
+                    </div>
+                </div>
             </div>
         </div>
     );

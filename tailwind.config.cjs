@@ -7,6 +7,23 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Inter var', ...defaultTheme.fontFamily.sans]
+            },
+            colors: {
+                primary: '#201e2d',
+                secondary: '#2a2839',
+                tertiary: '#12111B',
+                accent: '#F87171',
+                'primary-t': '#A29CDE',
+                'secondary-t': '#434059'
+            },
+            screens: {
+                smd: '880px',
+                sm: '640px',
+                xs: '560px',
+                '2xs': '425px'
+            },
+            transitionProperty: {
+                w: 'width'
             }
         }
     },

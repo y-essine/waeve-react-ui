@@ -3,11 +3,8 @@
 @tailwind utilities;
 
 :root {
-    --bg: #1e1e1e;
 
-    background: var(--bg);
-
-    @apply text-zinc-300 text-lg;
+    @apply bg-tertiary text-primary-t;
 
     overflow-y: overlay;
     overflow-x: hidden;
@@ -23,9 +20,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-zinc-700/80 hover:bg-zinc-600/70 rounded-full;
+    @apply bg-slate-700/80 hover:bg-slate-600/70 rounded-full;
 }
 
 h1 {
     @apply text-3xl font-bold;
+}
+
+input {
+    @apply bg-primary rounded-xl outline-none focus:ring-2 focus:ring-primary-t placeholder-secondary-t text-slate-300;
 }

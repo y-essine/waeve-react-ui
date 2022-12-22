@@ -16,7 +16,6 @@ function App() {
                     <Route path="*" element={<h1>Not Found</h1>} />
                 </Routes>
             </BrowserRouter>
-            <div className="hidden w-4 w-5 w-6 w-7 w-8 w-9 w-10 h-4 h-5 h-6 h-7 h-8 h-9 h-10"></div>
         </div>
     );
 }
