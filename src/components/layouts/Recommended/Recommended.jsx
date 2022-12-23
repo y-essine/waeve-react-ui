@@ -1,5 +1,5 @@
-import Card from '@/components/Card/Card';
-import Avatar from '@/components/utils/avatars/Avatar';
+import Card from '@/components/ui/card/Card';
+import Avatar from '@/components/ui/avatars/Avatar';
 
 const Recommended = () => {
     const people = [

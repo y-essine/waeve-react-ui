@@ -4,7 +4,8 @@ export default [
         author: {
             name: 'Joaõ Henrique',
             avatar: 'https://picsum.photos/200/302',
-            username: 'hendeeznuts'
+            username: 'hendeeznuts',
+            verified: true
         },
         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
         likes: [
@@ -29,7 +30,8 @@ export default [
             username: 'hansimus'
         },
         likes: [],
-        content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
+        content:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Amet amet ex ea sint.Enim cupidatat eu fugiat aliquip Lorem enim laboris adipisicing pariatur labore et aute consectetur quis.',
         createdAt: '2022-12-20T02:56:00.000Z'
     },
     {
@@ -59,4 +61,4 @@ export default [
         ],
         createdAt: '2022-12-20T03:05:00.000Z'
     }
-]
+];

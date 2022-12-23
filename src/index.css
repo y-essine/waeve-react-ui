@@ -27,6 +27,6 @@ h1 {
     @apply text-3xl font-bold;
 }
 
-input {
-    @apply bg-primary rounded-xl outline-none focus:ring-2 focus:ring-primary-t placeholder-secondary-t text-slate-300;
+input,textarea{
+    @apply bg-primary rounded-xl outline-none focus:ring-2 focus:ring-tertiary-t placeholder-tertiary-t resize-none caret-tertiary-t;
 }

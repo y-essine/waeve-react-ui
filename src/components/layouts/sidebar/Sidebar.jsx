@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import SidebarItem from '@/components/layouts/Sidebar/SidebarItem';
-import Icon from '@/components/utils/icons/Icon';
+import Icon from '@/components/ui/icons/Icon';
 import clsx from 'clsx';
 
 const items = [
@@ -42,6 +42,7 @@ const Sidebar = () => {
                         item={item}
                         isSidebarOpen={isOpen}
                         isActive={item.active}
+                        tooltip
                     />
                 ))}
             </div>

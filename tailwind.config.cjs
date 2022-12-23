@@ -13,8 +13,9 @@ module.exports = {
                 secondary: '#2a2839',
                 tertiary: '#12111B',
                 accent: '#F87171',
-                'primary-t': '#A29CDE',
-                'secondary-t': '#434059'
+                'primary-t': '#cbd5e1',
+                'secondary-t': '#A29CDE',
+                'tertiary-t': '#5a567c'
             },
             screens: {
                 smd: '880px',

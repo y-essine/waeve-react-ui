@@ -1,0 +1,9 @@
+// config file for paths
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "@/*": ["*"]
+        }
+    }
+}
