@@ -6,7 +6,7 @@ import Icon from '@/components/ui/icons/Icon';
 const NewPost = () => {
     return (
         <div className="flex">
-            <Avatar src={'https://picsum.photos/200/200'} size={12} />
+            <Avatar src={'/2.jpg'} size={12} />
             <div className="flex-1 pl-5">
                 <TextArea
                     className="w-full h-12 px-4 py-3"

@@ -7,53 +7,95 @@ import AvatarList from '@/components/ui/avatars/AvatarList';
 const Post = ({ post }) => {
     // get created at and format with moment to ago
     const createdAt = moment(post.createdAt).fromNow();
+    const formatter = new Intl.NumberFormat('en-US', {
+        notation: 'compact',
+        compactDisplay: 'short'
+    });
 
     return (
-        <Card px py hover>
+        <Card px py className="group">
             <div className="post flex">
                 <div className="mr-4">
-                    <Avatar src={post.author.avatar} size={10} className="cursor-pointer" />
+                    <Avatar src={post.author.avatar} size={14} className="cursor-pointer" />
                 </div>
                 <div className="w-full h-full">
                     <div className="top-part">
                         <div className="flex flex-grow justify-between">
                             <div className="flex items-center">
-                                <div className="text-sm font-bold capitalize hover:text-primary-t/80 text-primary-t cursor-pointer">
+                                <div className="font-bold capitalize hover:text-primary-t/80 text-primary-t cursor-pointer">
                                     {post.author.name}
                                 </div>
                                 {post.author.verified && (
                                     <div className="pl-3">
-                                        <Icon icon="fire" color="#f5911e" size={14} />
+                                        <Icon icon="fire" color="#f5911e" size={18} />
                                     </div>
                                 )}
                                 <Icon icon="dot" size={16} box={30} disabled />
-                                <div className="text-xs font-normal opacity-50 hover:opacity-75 cursor-pointer">
+                                <div className="text-sm font-normal opacity-50 hover:opacity-75 cursor-pointer">
                                     @{post.author.username}
                                 </div>
                             </div>
                             <div className="flex items-center">
-                                <Icon icon="ellipsis" button round size={14} box={25} darker />
+                                <Icon icon="ellipsis" button round size={16} box={25} darker />
                             </div>
                         </div>
                         <div className="text-xs font-normal opacity-30">{createdAt}</div>
                     </div>
                     <div className="content-part mt-3 pr-3">
-                        <div className="text-sm font-normal text-slate-300">{post.content}</div>
+                        <div className="font-normal text-slate-300">{post.content}</div>
                     </div>
-                    <div className="reactions-part mt-2">
+                    {post.images && (
+                        <div className="images-part mt-3 pr-3">
+                            <div className="flex-1 flex-wrap">
+                                {post.images?.map((image, index) => (
+                                    <div
+                                        key={index}
+                                        className="border-2 border-black/30 rounded-xl">
+                                        <img
+                                            src={image}
+                                            alt=""
+                                            className="w-full h-full min-h-[12rem] max-h-[20rem] rounded-xl overflow-hidden object-cover"
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
+                    <div className="reactions-part mt-3">
                         <div className="flex items-center">
                             <Icon
                                 icon="favorite"
-                                size={6}
-                                box={16}
+                                size={10}
+                                box={18}
                                 color="white"
+                                hoverColor="white"
                                 circle="#d95353"
+                                className="z-20 outline outline-3 outline-primary rounded-full"
                             />
-                            <Icon icon="comment" size={6} box={16} color="white" circle="#d95353" />
-                            <Icon icon="undo2" size={6} box={16} color="white" circle="#d95353" />
+                            <Icon
+                                icon="comment"
+                                size={10}
+                                box={18}
+                                color="white"
+                                hoverColor="white"
+                                circle="#74c48b"
+                                className="z-10 outline outline-3 outline-primary rounded-full"
+                            />
+                            <Icon
+                                icon="undo2"
+                                size={10}
+                                box={18}
+                                color="white"
+                                hoverColor="white"
+                                circle="#784c9e"
+                                className="z-0 outline outline-3 outline-primary rounded-full"
+                            />
+                            <div className="ml-2 text-xs font-semibold text-secondary-t opacity-60">
+                                {formatter.format(post.reactions)}
+                            </div>
                         </div>
                     </div>
-                    <div className="buttons-part pt-2 pr-3">
+                    <div className="buttons-part pt-4 pr-3">
                         <div className="flex justify-between">
                             <button className="flex items-center justify-center py-2 text-sm font-medium text-tertiary-t hover:text-primary-t duration-200 rounded-lg group">
                                 <Icon

@@ -2,10 +2,9 @@ export default [
     {
         id: 1,
         author: {
-            name: 'Joaõ Henrique',
-            avatar: 'https://picsum.photos/200/302',
-            username: 'hendeeznuts',
-            verified: true
+            name: 'Mrks',
+            avatar: 'https://picsum.photos/200/310',
+            username: '_marcus_'
         },
         content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.',
         likes: [
@@ -17,21 +16,24 @@ export default [
             {
                 name: 'Cancun',
                 avatar: 'https://picsum.photos/200/305',
-                username: 'ccc__cancun'
+                username: 'ccc.xcancun'
             }
         ],
+        reactions: '3678',
         createdAt: '2022-12-20T00:00:00.000Z'
     },
     {
         id: 2,
         author: {
-            name: 'Hans Müller',
-            avatar: 'https://picsum.photos/200/301',
-            username: 'hansimus'
+            name: 'YESSINE',
+            avatar: '/2.jpg',
+            username: 'y.essin.e',
+            verified: true
         },
         likes: [],
-        content:
-            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Amet amet ex ea sint.Enim cupidatat eu fugiat aliquip Lorem enim laboris adipisicing pariatur labore et aute consectetur quis.',
+        content: 'New whip ✨ 🤧',
+        reactions: '12',
+        images: ['/2.jpg'],
         createdAt: '2022-12-20T02:56:00.000Z'
     },
     {
@@ -59,6 +61,36 @@ export default [
                 username: 'popsmoke'
             }
         ],
+        reactions: '104',
+        createdAt: '2022-12-20T03:05:00.000Z'
+    },
+    {
+        id: 4,
+        author: {
+            name: 'Quandale D. Jones',
+            avatar: '/3.jpg',
+            username: 'quandingus'
+        },
+        content: "Hey it's quandale did you know that I'm a rapper?",
+        images: ['/3.jpg'],
+        likes: [
+            {
+                name: 'Ballacks Sohn',
+                avatar: 'https://picsum.photos/200/307',
+                username: 'bizarrerballack'
+            },
+            {
+                name: 'Yoda der Große',
+                avatar: 'https://picsum.photos/200/306',
+                username: 'yodagross'
+            },
+            {
+                name: 'Pop Smoke',
+                avatar: 'https://picsum.photos/200/309',
+                username: 'popsmoke'
+            }
+        ],
+        reactions: '104',
         createdAt: '2022-12-20T03:05:00.000Z'
     }
 ];

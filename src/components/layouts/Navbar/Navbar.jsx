@@ -32,9 +32,9 @@ const Navbar = ({ className }) => {
                         hfull
                         vcenter>
                         <div className="flex justify-between items-center space-x-4">
-                            <Avatar src="https://picsum.photos/200/200" size={6} />
+                            <Avatar src="/2.jpg" size={6} />
                             <span className="text-sm text-text-prim font-bold duration-200 capitalize hidden sm:block">
-                                Yassine K.
+                                YESSINE
                             </span>
                             <Icon icon="caret-down" end group size={8} />
                         </div>
