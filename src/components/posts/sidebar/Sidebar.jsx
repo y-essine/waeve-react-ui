@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import SidebarItem from '@/components/layouts/Sidebar/SidebarItem';
+import SidebarItem from '@/components/layouts/sidebar/SidebarItem';
 import Icon from '@/components/ui/icons/Icon';
 import clsx from 'clsx';
 
