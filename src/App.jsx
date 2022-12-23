@@ -9,11 +9,19 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Main />}>
                         <Route path="" element={<Home />} />
-                        <Route path="about" element={<h1>About</h1>} />
+                        <Route path="explore" element={<h1>Explore</h1>} />
+                        <Route path="settings" element={<h1>Settings</h1>} />
                     </Route>
                     <Route path="login" element={<h1>Login</h1>} />
                     <Route path="register" element={<h1>Register</h1>} />
-                    <Route path="*" element={<h1>Not Found</h1>} />
+                    <Route
+                        path="*"
+                        element={
+                            <div className="px-8 py-5">
+                                <h1>Not found.</h1>
+                            </div>
+                        }
+                    />
                 </Routes>
             </BrowserRouter>
         </div>

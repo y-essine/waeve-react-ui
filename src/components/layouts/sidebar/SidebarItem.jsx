@@ -1,15 +1,23 @@
+import clsx from 'clsx';
+import { Link } from 'react-router-dom';
 import Icon from '@/components/utils/icons/Icon';
 
-const SidebarItem = ({ item, isSidebarOpen }) => {
+const SidebarItem = ({ item, isSidebarOpen, isActive }) => {
     return (
-        <div className="flex items-center cursor-pointer group py-3 rounded-lg duration-200">
-            <Icon icon={item.icon} group size={item.size || 30} box={45} />
+        <Link
+            to={item.path}
+            className="flex items-center cursor-pointer group rounded-lg w-12 smd:w-32">
+            <Icon icon={item.icon} group size={item.size || 30} box={48} isActive={isActive} />
             {isSidebarOpen && (
-                <span className="pl-2 font-medium text-zinc-400 group-hover:text-zinc-300 duration-200 select-none hidden smd:block">
+                <span
+                    className={clsx(
+                        'ml-2 font-medium text-zinc-400 group-hover:text-zinc-300 duration-200 select-none hidden smd:block',
+                        isActive && '!text-zinc-300'
+                    )}>
                     {item.name}
                 </span>
             )}
-        </div>
+        </Link>
     );
 };
 

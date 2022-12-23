@@ -14,44 +14,50 @@ const Icon = ({
     className,
     group,
     round,
-    box
+    box,
+    children,
+    isActive
 }) => {
-    Icon.color = color;
     return (
-        <span
-            className={clsx(
-                `icon-${icon} flex justify-center items-center duration-200`,
-                button && 'cursor-pointer',
-                className,
-                !color && 'text-primary-t',
-                !hoverColor && 'hover:text-zinc-300',
-                group && 'group-hover:text-zinc-300',
-                disabled && 'opacity-50',
-                round && 'rounded-full hover:bg-zinc-100/10 p-3'
-            )}
-            css={css`
-                color: ${color};
-                ${button &&
-                !disabled &&
-                `
-                    &:hover {
-                        color: ${hoverColor};
-                    }
-                `}
-                font-size: ${size}px;
-                ${size &&
-                !box &&
-                `
-                    width: ${size}px;
-                    height: ${size}px;
+        <div className="relative">
+            <span
+                className={clsx(
+                    `icon-${icon} flex justify-center items-center duration-200`,
+                    button && 'cursor-pointer',
+                    className,
+                    !color && 'text-primary-t',
+                    !hoverColor && 'hover:text-zinc-300',
+                    group && 'group-hover:text-zinc-300',
+                    disabled && 'opacity-50',
+                    round && 'rounded-full hover:bg-zinc-100/10 p-3',
+                    isActive && '!text-zinc-300'
+                )}
+                css={css`
+                    color: ${color};
+                    ${button &&
+                    !disabled &&
+                    `
+                        &:hover {
+                            color: ${hoverColor};
+                        }
                     `}
-                ${box &&
-                `
-                    width: ${box}px;
-                    height: ${box}px;
-                    `}
-                ${end && 'justify-content: end !important;'}
-            `}></span>
+                    font-size: ${size}px;
+                    ${size &&
+                    !box &&
+                    `
+                        width: ${size}px;
+                        height: ${size}px;
+                        `}
+                    ${box &&
+                    `
+                        width: ${box}px;
+                        height: ${box}px;
+                        `}
+                    ${end && 'justify-content: end !important;'}
+                `}>
+                {children}
+            </span>
+        </div>
     );
 };
 

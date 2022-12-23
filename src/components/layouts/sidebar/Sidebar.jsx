@@ -7,7 +7,8 @@ const items = [
     {
         name: 'Home',
         icon: 'home',
-        path: '/'
+        path: '/',
+        active: true
     },
     {
         name: 'Explore',
@@ -26,8 +27,8 @@ const Sidebar = () => {
     const [isOpen, setIsOpen] = useState(true);
 
     return (
-        <div className={clsx('w-fit', !isOpen && 'w-[4rem]')}>
-            <div className="flex flex-col relative w-full space-y-3">
+        <div className={clsx('pr-8', !isOpen && 'w-10')}>
+            <div className="w-full space-y-6">
                 {/* <div
                     className="absolute -right-10"
                     onClick={() => {
@@ -36,7 +37,12 @@ const Sidebar = () => {
                     <Icon icon="pushpin" button />
                 </div> */}
                 {items.map((item, index) => (
-                    <SidebarItem key={index} item={item} isSidebarOpen={isOpen} />
+                    <SidebarItem
+                        key={index}
+                        item={item}
+                        isSidebarOpen={isOpen}
+                        isActive={item.active}
+                    />
                 ))}
             </div>
         </div>

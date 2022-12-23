@@ -17,17 +17,17 @@ function Home() {
                 </div>
                 <div className="font-extrabold select-none text-zinc-300/80">Recommended</div>
             </div> */}
-            <div className="flex">
-                <div className="space-y-4">
-                    <Card px py title="Post">
+            <div className="flex flex-grow">
+                <div className="w-full space-y-4">
+                    <Card px py title="📜 Post">
                         Veni vidi vici 🙌
                     </Card>
-                    <Card px py title="Post">
+                    <Card px py title="📜 Post">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ut ipsa iste
                         quod asperiores est. <br /> <br /> Autem vitae veritatis excepturi quaerat
                         aliquid consequatur ipsa! Similique fuga amet.
                     </Card>
-                    <Card px py title="Post">
+                    <Card px py title="📜 Post">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas atque
                         alias distinctio repudiandae, accusamus modi accusantium molestias
                         reprehenderit eos fuga veniam assumenda.

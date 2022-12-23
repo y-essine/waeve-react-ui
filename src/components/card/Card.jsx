@@ -12,7 +12,7 @@ const Card = ({ className, children, title, px, py, center, hcenter, vcenter, hf
                 hfull && '!h-full'
             )}>
             {title && <div className="text-slate-300 font-semibold px-5 py-3">{title}</div>}
-            <div className={clsx('w-full', px && 'px-5', py && 'py-3')}>{children}</div>
+            <div className={clsx(px && 'px-5', py && 'py-3')}>{children}</div>
         </div>
     );
 };

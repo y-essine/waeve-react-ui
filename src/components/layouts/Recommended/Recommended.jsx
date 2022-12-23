@@ -28,7 +28,7 @@ const Recommended = () => {
                         key={index}
                         className="flex items-center justify-between py-3 px-4 hover:bg-secondary duration-200 cursor-pointer w-full">
                         <div className="flex items-center">
-                            <Avatar src={p.avatar} size={12} className="mr-4" border />
+                            <Avatar src={p.avatar} size={12} className="mr-4" />
                             <span>
                                 <div className="text-sm font-medium">{p.name}</div>
                                 <div className="text-xs opacity-50">@{p.username}</div>
