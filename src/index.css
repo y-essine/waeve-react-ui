@@ -27,6 +27,6 @@ h1 {
     @apply text-3xl font-bold;
 }
 
-input,textarea{
+input:not([type=checkbox]),textarea{
     @apply bg-primary rounded-xl outline-none focus:ring-2 focus:ring-tertiary-t placeholder-tertiary-t resize-none caret-tertiary-t;
 }

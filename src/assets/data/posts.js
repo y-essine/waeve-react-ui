@@ -71,7 +71,7 @@ export default [
             avatar: '/3.jpg',
             username: 'quandingus'
         },
-        content: "Hey it's quandale did you know that I'm a rapper?",
+        content: "Hey it's quandale dingus here",
         images: ['/3.jpg'],
         likes: [
             {

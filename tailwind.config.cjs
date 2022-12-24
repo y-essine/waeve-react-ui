@@ -28,5 +28,16 @@ module.exports = {
             }
         }
     },
-    plugins: []
+    plugins: [require('daisyui')],
+    // daisyUI config (optional)
+    daisyui: {
+        styled: true,
+        themes: true,
+        base: true,
+        utils: true,
+        logs: false,
+        rtl: false,
+        prefix: '',
+        darkTheme: 'dark'
+    }
 };

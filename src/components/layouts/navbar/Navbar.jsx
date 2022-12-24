@@ -3,6 +3,7 @@ import Avatar from '@/components/ui/avatars/Avatar';
 import Icon from '@/components/ui/icons/Icon';
 import Badge from '@/components/ui/icons/Badge';
 import Card from '@/components/ui/card/Card';
+import Menu from '@/components/ui/menu/Menu';
 
 const Navbar = ({ className }) => {
     return (
@@ -21,24 +22,61 @@ const Navbar = ({ className }) => {
                     />
                 </div>
                 <div className="flex items-center space-x-6">
-                    <Icon icon="book" button size={26} disabled />
-                    <Icon icon="chat" button size={26} />
-                    <Icon icon="notifs" button size={26}>
-                        <Badge />
-                    </Icon>
-                    <Card
-                        className="cursor-pointer group hover:bg-secondary duration-200"
-                        px
-                        hfull
-                        vcenter>
-                        <div className="flex justify-between items-center space-x-4">
-                            <Avatar src="/2.jpg" size={6} />
-                            <span className="text-sm text-text-prim font-bold duration-200 capitalize hidden sm:block">
-                                YESSINE
-                            </span>
-                            <Icon icon="caret-down" end group size={8} />
-                        </div>
-                    </Card>
+                    <Menu
+                        template={<Icon icon="book" button size={26} />}
+                        title="✨ Top books"
+                        className="mt-4"
+                        bottom
+                        end>
+                        Menu content
+                    </Menu>
+                    <Menu
+                        template={<Icon icon="chat" button size={26} />}
+                        title="📥 Inbox"
+                        className="mt-4"
+                        bottom
+                        end>
+                        Messages here.
+                    </Menu>
+                    <Menu
+                        template={
+                            <Icon icon="notifs" button size={26}>
+                                <Badge />
+                            </Icon>
+                        }
+                        title="🛎️ Notifications"
+                        className="mt-4"
+                        bottom
+                        end>
+                        Notifications here.
+                    </Menu>
+                    <Menu
+                        template={
+                            <Card
+                                className="cursor-pointer group hover:bg-secondary duration-200"
+                                px
+                                py
+                                vcenter>
+                                <div className="flex justify-between items-center space-x-4">
+                                    <Avatar src="/2.jpg" size={6} />
+                                    <span className="text-sm text-text-prim font-bold duration-200 capitalize hidden sm:block">
+                                        YESSINE
+                                    </span>
+                                    <Icon icon="caret-down" end group size={8} />
+                                </div>
+                            </Card>
+                        }
+                        className="mt-4"
+                        bottom
+                        end>
+                        <label className="swap swap-flip text-9xl">
+                            {/* this hidden checkbox controls the state */}
+                            <input type="checkbox" />
+
+                            <div className="swap-on">😈</div>
+                            <div className="swap-off">😇</div>
+                        </label>
+                    </Menu>
                 </div>
             </div>
         </div>

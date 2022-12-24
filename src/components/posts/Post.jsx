@@ -48,13 +48,11 @@ const Post = ({ post }) => {
                         <div className="images-part mt-3 pr-3">
                             <div className="flex-1 flex-wrap">
                                 {post.images?.map((image, index) => (
-                                    <div
-                                        key={index}
-                                        className="border-2 border-black/30 rounded-xl">
+                                    <div key={index} className="rounded-md">
                                         <img
                                             src={image}
                                             alt=""
-                                            className="w-full h-full min-h-[12rem] max-h-[20rem] rounded-xl overflow-hidden object-cover"
+                                            className="w-full h-full min-h-[12rem] max-h-[20rem] rounded-md overflow-hidden object-cover"
                                         />
                                     </div>
                                 ))}
@@ -100,7 +98,7 @@ const Post = ({ post }) => {
                             <button className="flex items-center justify-center py-2 text-sm font-medium text-tertiary-t hover:text-primary-t duration-200 rounded-lg group">
                                 <Icon
                                     icon="favorite"
-                                    size={16}
+                                    size={14}
                                     box={20}
                                     group
                                     hoverColor="#d95353"></Icon>

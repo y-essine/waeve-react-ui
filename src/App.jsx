@@ -1,16 +1,20 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import Main from '@/views/Main';
 import Home from '@/views/Home';
+import Explore from '@/views/Explore';
+import Settings from '@/views/Settings';
 
 function App() {
     return (
         <div className="App w-screen h-screen">
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Main />}>
+                    <Route exact path="/" element={<Main />}>
                         <Route path="" element={<Home />} />
-                        <Route path="explore" element={<h1>Explore</h1>} />
-                        <Route path="settings" element={<h1>Settings</h1>} />
+                        <Route path="explore" element={<Explore />} />
+                        <Route path="settings" element={<Settings />} />
                     </Route>
                     <Route path="login" element={<h1>Login</h1>} />
                     <Route path="register" element={<h1>Register</h1>} />

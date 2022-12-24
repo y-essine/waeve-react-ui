@@ -9,7 +9,7 @@ const Avatar = ({ src, size, className, border }) => {
                 width: ${size * 4}px;
                 height: ${size * 4}px;
             `}>
-            <img className={`rounded-full h-full w-full`} src={src} alt="" />
+            <img className={`rounded-full h-full w-full object-cover`} src={src} alt="" />
         </div>
     );
 };
